@@ -19,10 +19,12 @@ console.log(imgSet);
 imgSet.style.display = 'flex';
 imgSet.style.justifyContent = 'center';
 imgSet.style.gap = '40px';
-imgSet.style.borderRadius = '5px';
 
-// const imgItem = images.map(function ({ url, alt }) {
-//   return '<li><img src = ></li>';
-// });
+const imgItem = images
+  .map(function ({ url, alt }) {
+    let img;
+    return (img = `<li style = 'list-style: none': none'><img src=${url} alt=${alt} style = 'width: 150px'></li>`);
+  })
+  .join('');
 
 imgSet.insertAdjacentHTML('beforeend', imgItem);
