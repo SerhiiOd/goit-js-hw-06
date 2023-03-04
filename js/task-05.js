@@ -7,14 +7,5 @@ refs.nameInput.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
   refs.nameOutput.textContent = event.currentTarget.value;
+  refs.nameOutput.textContent = !event.textContent;
 }
-
-// function onInputChange(event) {
-//   if (event) {
-//     refs.nameOutput.textContent = event.currentTarget.value;
-//   } else if (change) {
-//     refs.nameOutput.textContent = event;
-//   }
-// }
-
-// console.log(onInputChange.trim());
