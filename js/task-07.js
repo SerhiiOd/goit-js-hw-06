@@ -9,3 +9,4 @@ inputControl.oninput = changeFontSize;
 function changeFontSize() {
   sizeText.style.fontSize = this.value + 'px';
 }
+console.log(changeFontSize);
