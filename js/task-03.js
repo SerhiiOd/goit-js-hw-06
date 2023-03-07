@@ -23,7 +23,7 @@ imgSet.style.gap = '40px';
 const imgItem = images
   .map(function ({ url, alt }) {
     let img;
-    return (img = `<li style = 'list-style: none': none'><img src=${url} alt=${alt} style = 'width: 150px'></li>`);
+    return (img = `<li style = 'list-style: none': none'><img src=${url} alt=${alt} style = 'width: 150px; height: 100px'></li>`);
   })
   .join('');
 
