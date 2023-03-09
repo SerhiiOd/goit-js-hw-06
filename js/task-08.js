@@ -3,22 +3,19 @@ const form = document.querySelector('form.login-form');
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  const fields = document.querySelectorAll('input');
-  const values = {};
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
 
-  fields.forEach(field => {
-    const { name, value } = field;
-    values[name] = value;
-  });
-  console.log(values);
-  
-  for (let elem of form.elements) {
-    if (elem.tagName !== 'BUTTON') {
-      if (elem.value == '') {
-        alert('Заполните пустые поля!');
-      }
-    }
+  const formData = {};
+
+  if (email.value != '' && password.value != '') {
+    formData.email = email.value;
+    formData.password = password.value;
+  } else {
+    return alert('Заполните пустые поля!');
   }
 
-  form.reset();
+  console.log(formData);
+  event.currentTarget.reset();
 });

@@ -31,5 +31,5 @@ function createBoxes(amount) {
   }
 }
 function destroyBoxes() {
-  boxesRef.innerHTML = '';
+  boxes.innerHTML = '';
 }
